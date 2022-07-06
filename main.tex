@@ -74,7 +74,8 @@ Finally found a way to describe my project: simulating radioisotope production f
     a: alpha decay beta plus decay and electron capture, bm: beta minus decay, g: gamma emission, e: Auger and conversion electron, x: X-ray emission
     \item \href{https://www-nds.iaea.org/amdc/}{Nubase 2020 + AME 2020} + \href{https://www.doseinfo-radar.com/RADARDecay.html}{RADAR} $\to$ decay chains that only include the decay modes $\beta^-$ decay and gamma emission (except for the final daughter nucleus, which can decay by any mode or even be stable).
 \end{enumerate}
-The only thing standing between seamlessly using the same code on Colab and my laptop is the file system. I need to write a function to handle that. Left off in the livecharts notebook on Github and the laptop and  \href{https://colab.research.google.com/drive/1rXPnMapuznZOmF3p908jdk1eiosalbjV?usp=sharing}{this colab notebook}
-
+The only thing standing between seamlessly using the same code on Colab and my laptop is the file system. I need to write a function to handle that. Left off in the livecharts notebook on Github and the laptop and  \href{https://colab.research.google.com/drive/1rXPnMapuznZOmF3p908jdk1eiosalbjV?usp=sharing}{this colab notebook}\\
+\includegraphics[scale=.4]{Images/concept setup.PNG}\\
+In this setup, a gamma ray will be fired at a neutron donor (blue cylinder) which would then be captured by the neutron acceptor (red surroundings). Ideally, the neutron donor would have a very small radius but be a very long cylinder. Assuming every gamma ray produces a neutron which is then capture by the neutron acceptor, it would only cost 1MeV/neutron with deuterium as a neutron donor (leading an energy storage efficiency of $~\frac{1}{3}$ based on the power density of decay chains work since one traverse along each chain yields $300$ keV). Can it's low cross section and density be overcome with this design? What is the ideal neutron acceptor for each neutron donor? Is this less efficient than firing protons into the neutron acceptor? 
 
 \end{document}
