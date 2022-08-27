@@ -9,6 +9,7 @@
 \usepackage{mathabx}
 \usepackage{relsize}
 \usepackage{graphics}
+\usepackage{outlines}
 \usepackage[colorlinks = true,
             linkcolor = blue,
             urlcolor  = blue,
@@ -85,8 +86,31 @@ Doing more data wrangling using the link with the superset of all the data in th
 \section{August}
 \subsubsection{8/9/2022}
 Installed and setup talys in a subdirectory of my downloads folder using WSL. In the process, I downloaded gfortran. Now have a talys executable in the bin directory of WSL. \\
-Also automated and the use of the DPASS GUI to retrieve data. Takes $<$ 6 hours to retrieve the entire database. 
+Also automated and the use of the DPASS GUI to retrieve data. Takes $<$ 6 hours to retrieve the entire database. \\
 
+\subsubsection{8/11/2022}
+Made a lot more progress on the code. Wondering if radiative capture and neutron absorption are the only two competing reactions? They are certianly a subset of them. (screenshot from endf6 manual) \\
+\includegraphics[scale=.4]{Images/are these the only two competing reactions.PNG}\\
+I don't care about the specific reaction so much as the residual products including the desired product isotope. 
+
+\subsubsection{8/15/2022}
+Been reading \href{https://www-nds.iaea.org/exfor}{exfor} a lot recently. \\
+very pleasantly surprised by some of the gamma ray cross sections of Fe-58. On the order of .001 barns at .01 MeV for the emission a neutron. We have 
+\begin{equation}
+    k = \frac{\rho\sigma N_A}{M}
+\end{equation}
+where $M$ is the molar mass in kg, $N_A$ is Avogadro's constant, $\sigma$ is the cross section in m$^2$ and $\rho$ is the mass density in kg/m$^3$. Note that for iron, $\rho N_A/M\approx 6\times10^{26}$.
+Based on "On the 58Fe($\gamma$,n)57Fe reaction near a threshold" by Kitaev et al, there is a surprisingly low energy peak of 0.038 barns at 0.00597 MeV. 
+$k\approx  6\sigma\times10^{26} approx  10^{-3}$. Thus, for a \textbf{thin} target it would take approximately 6 MeV to produce each neutron. Either the data is wrong or I am reading it wrong (maybe it is actually meant to be in GeV??). According to both ENDF and TENDL, it cross sections should peak at .096 barns at 19 MeV, which makes much more since when considering the nuclear binding energy that must be overcome in the $(\gamma,n)$ reaction. 
+\subsubsection{August 26th}
+After months of consideration I've decided on the following for my workflow: 
+\begin{outline}
+\1 Repetitive or computationally expensive tasks
+    \2 Code these parts using the Julia language rather than Python. While I'm writing it, I can even do so in a Jupyter notebook, I just need to set the kernel to the Julia executable. There is a shortcut to do exactly this in VS code, so it is very convenient to go between kernels. 
+    \2 By uploading such a notebook to Google Colab, then downloading it as a .py file, then resaving it as a .jl file, it is very fast to convert Julia Jupyter notebook into a julia script. 
+    \2 \href{https://colab.research.google.com/drive/1vUglHFSJJcE75oV5qs9fQFAh6yQPVIiF?usp=sharing}{
+    Example of how to run individual cells of Julia in Colab}. One can easily just call these julia scripts while invoking the Julia executable from a Python Jupyter notebook. Note that some packages are not compatible with voila and Heroku web apps, but they will work on colab as seen in the linked example. 
+\end{outline}
 
 
 \end{document}
