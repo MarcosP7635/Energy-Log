@@ -116,6 +116,19 @@ After months of consideration I've decided on the following for my workflow:
 Honestly, one of the few things missing in Julia is Viola and the ability to easily run on heroku. Can I fix that? \\
 I'm a fool and binder works with julia!!!\\
 SO DOES \href{https://jupyter-tutorial.readthedocs.io/en/stable/web/dashboards/voila/index.html}{voila!! :)}
-Will test this out later 
+Will test this out later \\
+To use Julia in binder, include a Project.toml file with the text: 
+\begin{lstlisting}
+[compat]
+julia = "1.6"
+\end{lstlisting}
+The first cell should also install every package needed. \\
+\href{https://github.com/MarcosP7635/binder_julia_test}{Example that works until I need to call the data}. Can I automate a backup on heroku using \href{https://binderhub.readthedocs.io/en/latest/zero-to-binderhub/index.html}{this}? \\
+I really think binder is so ideal :) \\
+\subsubsection{8/31/2022}
+Consider a microscopic fuel cell. Whenever power is needed, a very short lived radioisotope is produced, which produces large amounts of energy.
+This should allow for long shelf-life, very high specific power, and high specific energy.
+Materials such a neutron reflectors seem crucial for such a reaction
+
 
 \end{document}
