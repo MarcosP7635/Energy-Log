@@ -172,6 +172,32 @@ From the Rydberg formula, an atom's ionization energy is proportional to $Z^2$. 
 Found some ionization energies here: https://webbook.nist.gov/chemistry/ie-ser/ and https://physics.nist.gov/PhysRefData/ASD/ionEnergy.html and https://physics.nist.gov/cgi-bin/ASD/ie.pl in case I need them later. 
 \subsubsection{9/16/2022}
 How many decay chains can use electron capture as a stopping point? Ideally, they would then decay into an isotope that quickly releases a lot of energy. Fully ionizing such a nucleus seems like an interesting way to pause a decay chain. Are there other ways of achieving this without relativistic effects? 
+\subsubsection{9/17/2022}
+What is the energy efficiency of use neutrons travelling in a circle to cause the reaction $^2$H(n,2n) \href{https://www-nds.iaea.org/dataexplorer/?target_elem=H&target_mass=2&reaction=n\%2C2n}{link on data explorer}.\\
+\href{https://www-nds.iaea.org/dataexplorer/?target_elem=H&target_mass=2&reaction=n\%2Ctotal}{total neutron cross sections for deuterium on data explorer}
+\subsubsection{9/18/2022}
+Trying talys because my brain hurts. Some of the ENDF reaction cross sections are larger than their corresponding total cross sections. By definition, that reaction cross section is part of the sum equal to the total cross sections. That means there is a negative cross section of a different reaction at that energy and/or something is very wrong. \\
+Saved the results in a file named verify\_ouput.txt\\
+Tests passed: 20526\\Tests failed: 2084\\Tests failed and ignored: 192
+\subsubsection{9/19/2022}
+Is the violation of the summation rule the result of multiple reactions happening per projectile in the model??
+\subsubsection{9/22/2022}
+Maybe I'm just not taking into account multiplicity? When I run the talys command line tool, that is one of the outputs. What does that mean here? Is that the average number of reactions per cross section? The smallest element the command line tool will work with is lithium :/. \\
+In section 4.2.4 page 71 of "TALYS-1.96/2.0
+Simulation of nuclear reactions" by Arjan Koning, Stephane Hilaire, and Stephane Goriely, the neutron multiplicity $Y_n$ is defined as 
+\begin{equation}
+\begin{split}
+Y_n = \frac{\sigma_n}{\sigma_{non-el}}\\
+\end{split}
+\end{equation}
+where $\sigma_n$ is the total neutron production cross section and $\sigma{non-el}$ is the nonelastic collision cross section. In more detail, the total neutron production cross section is defined as 
+\begin{equation}
+\begin{split}
+\sigma_n = \sum_{i_n=0}^\infty\sum_{i_d=0}^\infty\sum_{i_p=0}^\infty\sum_{i_t=0}^\infty\sum_{i_h=0}^\infty\sum_{i_\alpha=0}^\infty i_n\sigma^{ex}\
+\end{split}
+\end{equation}
+where $i_x$ is the number of outgoing particles named $x$ ($i_n$ is the number of outgoing neutrons) and $\sigma_{ex}$ is a cross section specific to a given number of outgoing particles. Thus, the number I have been looking for is actually $\sigma_{ex}$ not $\sigma_n$! 
+
 
 
 \end{document}
