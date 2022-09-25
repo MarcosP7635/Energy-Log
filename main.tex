@@ -190,14 +190,20 @@ Simulation of nuclear reactions" by Arjan Koning, Stephane Hilaire, and Stephane
 Y_n = \frac{\sigma_n}{\sigma_{non-el}}\\
 \end{split}
 \end{equation}
-where $\sigma_n$ is the total neutron production cross section and $\sigma{non-el}$ is the nonelastic collision cross section. In more detail, the total neutron production cross section is defined as 
+where $\sigma_n$ is the total neutron production cross section and $\sigma_{non-el}$ is the nonelastic collision cross section. In more detail, the total neutron production cross section is defined as 
 \begin{equation}
 \begin{split}
 \sigma_n = \sum_{i_n=0}^\infty\sum_{i_d=0}^\infty\sum_{i_p=0}^\infty\sum_{i_t=0}^\infty\sum_{i_h=0}^\infty\sum_{i_\alpha=0}^\infty i_n\sigma^{ex}\
 \end{split}
 \end{equation}
 where $i_x$ is the number of outgoing particles named $x$ ($i_n$ is the number of outgoing neutrons) and $\sigma_{ex}$ is a cross section specific to a given number of outgoing particles. Thus, the number I have been looking for is actually $\sigma_{ex}$ not $\sigma_n$! 
-
-
+\subsubsection{9/23/2022}
+Another advantage of pushing interactive html to my plots github repo is that it also shows up on firebase.  \href{https://mp7635plots.web.app/avg_b_energy_vs_half_life.html}{E.g.}
+\subsubsection{9/24/2022}
+There are 49 sub-directories in ENDF-libraries. My main goal right now is two-fold: find what naturally occurring isotopes are ideal for spending the least amount of energy to produce neutrons by accelerating neutrons through the material; and finding what decay chains are ideal to quickly produce electricity. For working energy storage in space or underwater, the ideal decay chain also produces the original neutron source and target.
+\subsubsection{9/25/2022}
+I found out what data was being used from tendl on the data explorer website, so I programmatically downloaded that over the course of an hour from google colab in julia :) \\
+Backed up the Jupyter notebook where I did so in my github repo :)\\
+I think this data actually follows the summation rules so that is a good sign.
 
 \end{document}
