@@ -206,5 +206,14 @@ I found out what data was being used from tendl on the data explorer website, so
 Backed up the Jupyter notebook where I did so in my github repo :)\\
 I think this data actually follows the summation rules so that is a good sign.\\
 Just plotted the average binding energy per nucleon vs. energy required per neutron produced using a perfectly efficient neutron accelerator. The best neutron source for the target of such a neutron accelerator is 9Be. The theoretical maximum is approximately 0.06 neutrons per MeV. Deuterium was .014 neutrons per MeV. They appear to be directly improportional, but only for the top right region of the graph. Why does the rest seem to not follow the same relationship? 
+\subsubsection{9/26/2022}
+Inverted the y-axis on the plot and made this\\
+\includegraphics[scale=.4]{Images/binding_energy_vs_energy_per_neutron.png}\\
+The far off-left points are deuterium and beryllium-9, respectively. 
+\subsubsection{9/27/2022}
+Redid all of the power density time series calculations for all of the beta decay chains. It was much faster when I rewrote it in Julia (only takes 4 minutes vs. the hour it took in Python). The minimum energy to produce neutrons I calculated does not take into account the kinetic energy of the incident and produced neutrons. How accurate of an approximation is the Q-value?
+\subsubsection{9/28/2022}
+Between 20,000 and 100,000 seconds, the Pb212 decay chain has a specific power of 10 MW / mole, so this would be very useful for solar farms. At the 10$^6$ seconds (two weeks) 223 Ra produces 300 kw / mole. \\
+The decays subdirectory of ENDF8 lists the average decay data for a number of nuclides. I can also use JENDL-5 and JEFF 3.3 (ENDF libraries-2). Now I can build new decay chains using the average decay energy for all decay types :) 
 
 \end{document}
