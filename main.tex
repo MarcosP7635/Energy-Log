@@ -220,8 +220,21 @@ jendl5 has B+/EC average energy and jeff33 has average spontaneous fission energ
 \section{October}
 \subsubsection{10/1/2022}
 Made a very user-friendly colab notebook to plot the specific power of a given isotope and it works :) \\
-Need to check why some isotopes (such as Bi-207) have 0. Is it because they're not in livechart?
-
-
+Need to check why some isotopes (such as Bi-207) have 0. Is it because they're not in livechart?\\
+For isotopes with multiple decay modes, do the different decay modes have different half lives?
+\subsubsection{10/2/2022}
+Can now account for electron capture. \\
+The maximum power densities are now very different now that I actually use the average decay energy rather than the maximum. \\
+I should be more specific in what I mean by "power produced". I could just take the average kinetic energy of the be\\
+Apparently ENDF8 has more data than everything else. \\
+I can just add the sum of the energies, excluding the neutrino energy from endf8. \\
+\href{tinyurl.com/power-density-viewer}{tinyurl.com/power-density-viewer}\\
+3 kg of Na-24 can power an airplane continuously for an entire day. 
+\subsubsection{10/3/2022}
+I overestimated power time series because I count the earlier decay steps an additional time for each decay mode beyond the first. How do I prevent this? 
+I can rewrite the function power\_per\_mole to account for this. 
+\subsubsection{10/4/2022}
+Writing a function to prevent the overestimate. Comparing strings in nested vectors is very slow, and managing trees is beyond the scope of this project (and my time and energy). Thus, I'll just generate the decay chains as needed rather than drawing from a CSV or dictionary.\\
+Representing decay chains as a dictionary is by far the cleanest and simplest solution.  
 
 \end{document}
