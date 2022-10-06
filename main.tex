@@ -220,8 +220,36 @@ jendl5 has B+/EC average energy and jeff33 has average spontaneous fission energ
 \section{October}
 \subsubsection{10/1/2022}
 Made a very user-friendly colab notebook to plot the specific power of a given isotope and it works :) \\
-Need to check why some isotopes (such as Bi-207) have 0. Is it because they're not in livechart?
-
+Need to check why some isotopes (such as Bi-207) have 0. Is it because they're not in livechart?\\
+For isotopes with multiple decay modes, do the different decay modes have different half lives?
+\subsubsection{10/2/2022}
+Can now account for electron capture. \\
+The maximum power densities are now very different now that I actually use the average decay energy rather than the maximum. \\
+I should be more specific in what I mean by "power produced". I could just take the average kinetic energy of the be\\
+Apparently ENDF8 has more data than everything else. \\
+I can just add the sum of the energies, excluding the neutrino energy from endf8. \\
+\href{tinyurl.com/power-density-viewer}{tinyurl.com/power-density-viewer}\\
+3 kg of Na-24 can power an airplane continuously for an entire day. 
+\subsubsection{10/3/2022}
+I overestimated power time series because I count the earlier decay steps an additional time for each decay mode beyond the first. How do I prevent this? 
+I can rewrite the function power\_per\_mole to account for this. 
+\subsubsection{10/4/2022}
+Writing a function to prevent the overestimate. Comparing strings in nested vectors is very slow, and managing trees is beyond the scope of this project (and my time and energy). Thus, I'll just generate the decay chains as needed rather than drawing from a CSV or dictionary.\\
+Representing decay chains as a dictionary is by far the cleanest and simplest solution.  \\
+The dictionary method doesn't work because different steps could have the same decay energy. Nested dictionaries, however, should work. 
+\subsubsection{10/5/2022}
+Nested dictionaries do work. I realize I can have one big dictionary storing the decay info of every isotope. To make the decay chain of a given isotope, I just make a different dictionary where the parent is the decay of the given isotope. \\
+For the half lives and decay modes should I exclusively use ENDF8? 
+\subsubsection{10/8/2022}
+Some quick OOM. Assuming a neutron's magnetic moment is aligned with a magnetic field, we have for the force experienced by the neutron where $m_n$ is the mass of the neutron, it is moving at a velocity $v$, and it is moving in a circular path with a radius $r$
+\begin{equation}
+\begin{split}
+F= \frac{m_nv^2}{r} = s\nabla B\\
+v = \sqrt{\frac{rs\nabla B}{m}}\\
+\end{split}
+\end{equation}
+According to \href{https://doi.org/10.1063/1.3664092}{Zanini et al. APL. 2011.},
+micro magnet arrays can achieve magnetic field gradients on the order of $10^6$T/m. Thus we have for the velocity of neutrons on the track $\log_{10}v = \frac{1}{2}(-1 - 26 + 6 + 27) = 3$. Thus this should be able keep neutrons on a circular path for kinetic energies $\log_{10}T = -27 + 6 = -21$ or .01 eV. For thermal neutrons, the gradient of the magnetic field would need to be on the order of $10^7$T/m. Of course, a larger radius of 1 m would also be sufficient. 
 
 
 \end{document}
