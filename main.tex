@@ -249,7 +249,30 @@ v = \sqrt{\frac{rs\nabla B}{m}}\\
 \end{split}
 \end{equation}
 According to \href{https://doi.org/10.1063/1.3664092}{Zanini et al. APL. 2011.},
-micro magnet arrays can achieve magnetic field gradients on the order of $10^6$T/m. Thus we have for the velocity of neutrons on the track $\log_{10}v = \frac{1}{2}(-1 - 26 + 6 + 27) = 3$. Thus this should be able keep neutrons on a circular path for kinetic energies $\log_{10}T = -27 + 6 = -21$ or .01 eV. For thermal neutrons, the gradient of the magnetic field would need to be on the order of $10^7$T/m. Of course, a larger radius of 1 m would also be sufficient. 
+micro magnet arrays can achieve magnetic field gradients on the order of $10^6$T/m. Thus we have for the velocity of neutrons on the track $\log_{10}v = \frac{1}{2}(-1 - 26 + 6 + 27) = 3$. Thus this should be able keep neutrons on a circular path for kinetic energies $\log_{10}T = -27 + 6 = -21$ or .01 eV. For thermal neutrons, the gradient of the magnetic field would need to be on the order of $10^7$T/m. Of course, a larger radius of 1 m would also be sufficient.
+\subsubsection{10/9/2022}
+Is deuterium tritium fusion practical yet? If so, making tritium would be a great way to store energy. What is the specific energy of tritium deuterium fusion? 17.6 MeV per reaction $\approx10^7$MeV$\approx10^{-12}$J. Per mole of reaction this is approximately $6\times10^{11}$. Each mole will have approximately 5 grams of mass so this gives $\approx10^{11}$J/g. At STP, hydrogen has a density of $\approx10^{-1}$kg/m$^3$, and thus we have a power density of $\approx10^{13}$J/m$^3$ or $\approx10^{10}$J/L. Gasoline only has a specific energy of $<10^8$MJ/kg and an energy density of $<10^8$J/L. No it isn't practical yet. \\
+\subsubsection{10/10/2022}
+Can I make a particle go through loops using the coriolis force? For a frame rotating at an angular velocity $\omega$, and a particle moving within that frame at a velocity $v'$ the resulting acceleration from the coriolis force is $-2(\omega\times v')$. By definition, if the reference frame is rotating with radius $r$ and velocity $v$, and assuming all angles are normal 
+\begin{equation}
+\begin{split}
+a_{coriolis} = -2(\frac{v}{r})\times v' = \frac{v'^2}{r'}\\
+r' = \frac{v'r}{-2(v)}
+\end{split}
+\end{equation}
+Assuming we want this circle within the rotating frame to stay within the radius $r$
+\begin{equation}
+\begin{split}
+2r' < r\\
+\frac{v'r}{v} < r\\
+v' < v\\
+\end{split}
+\end{equation}
+\subsubsection{10/14/2022}
+Example of a decay chain I was able to display programmatically :)\\
+\includegraphics[]{Images/cropped_example_of_decay_chain.png}
+
+
 
 
 \end{document}
