@@ -326,8 +326,13 @@ Also here is the format of the open in colab button written in markdown that you
 \end{lstlisting}
 I should go through all of the data I have to figure out what datasets have this problem. 
 \subsubsection{11/8/2022}
-
-
 Create a web app where you enter the use case and the app returns the appropriate radioisotopes, conversion method, shielding required, msds, and how to produce it (and who currently does it)
+\subsubsection{11/13/2022}
+Added a new plot to the web app and took this screenshot of me using my streamlit app. \\
+\includegraphics[scale=.6]{Images/newplot(4).png}\\
+This does not take into account the efficiency of converting this power into electricity, and it does not account for the fraction of neutrons that would be absorbed the target nucleus. These isotopes were selected because they can, at least in theory, be produced by irradiating a naturally occurring isotope and the total energy release during their decay is more than the minimum energy it would take to produce these neutrons (~ 16 MeV / neutron). See either of these interactive plots for the efficiencies of other isotopes: \href{https://marcosp7635.github.io/plots/keV_per_neutron.html}{github pages version} and \href{https://mp7635plots.web.app/keV_per_neutron.html}{firebase version}. Neither of these plots include parent isotopes that have less neutrons than the naturally occurring isotopes of the same element. 
+
+
+
 
 \end{document}
