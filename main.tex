@@ -338,7 +338,15 @@ What kind of shielding would you need for using these isotopes to store energy?\
 \includegraphics[scale=.65]{Images/silicon_plot.PNG}
 \subsubsection{11/19/2022}
 Is it possible to produce neutrons for less than 2 MeV each by firing gamma rays into a column of deuterium plasma? How much energy does it take to produce, maintain, and confine the plasma? How could we use the neutrons for nuclear reactions? \\
-I calculated the minimum energy it takes to produce neutrons by firing neutrons already obtained a every possible target. What are the same minimum energies for other projectiles? 
+I calculated the minimum energy it takes to produce neutrons by firing neutrons already obtained a every possible target. What are the same minimum energies for other projectiles? \\
+I need to make sure I'm including metastable isotopes as well. Some of them are promising, such as Re-184m. 
+\subsubsection{11/20/2022}
+Using the same data retrieval methods from the calculations for power released decay chains to analyze metastable isotopes. found over 900 metastable isotopes in ENDF8. Metastable isotopes where the projectile is an electron or gamma ray could be used for rechargable batteries.\\
+JENDL5 appears to have more isotopes overall and 71 more metastable isotopes, so I will be using that decay dataset instead. \\
+Build format detection software?
+\subsubsection{11/21/2022}
+By analyzing JENDL5 data and falling back on ENDF8 when necesssary, I have found 89 ground states with half lives longer than 4 months. Now to analyze the stability of excited states, and if they can be used for net energy release. 
+
 
 
 \end{document}
