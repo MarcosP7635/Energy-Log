@@ -356,7 +356,24 @@ where $N_A$ is Avogadro's constant, $E$ is the reaction energy in electronvolts,
 \subsubsection{11/23/2022}
 What are the cross sections for nuclear excitation and nuclear de-excitation? Inelastic scattering produces excited states. What are the half-lives of these excited states? JENDL5 only lists several dozen. \\
 Using the Nuclear Atlas from Jain et al. in 2015 to get the half lives of different excited states. used pdftotext.com and the PyPDF2 Python package. When specifying utf-8 encoding, the python package appears to have been more effective.
-
+\subsubsection{11/25/2022}
+Luckily, I was able copy paste all of the text from the 109 page PDF at once without any programming. Adobe Acrobat PDF reader in the view menu has a button named enable scrolling. Once this is clicked, ctrl+a can select all of the text in a PDF at once, so I just copy pasted it into a text file. 
+\subsubsection{11/29/2022}
+Nubase 2020 includes some excited states. The first energy level ends with "m" and the second ends with "n", and so on for further energy levels. For instance, the fourth metastable isomer of 121Sn is 121Snq. Silicon 28 has 3 excited states denoted $r$, $i$, and $j$. 
+\subsubsection{11/30/2022}
+Made a new plot that is publicly uploaded to the internet. It shows the half-lives and decay energies of isotopes that have at least one metastable energy state with a half-life longer than one year. I don't think it includes the ground state. \\
+Made a very helpful \href{https://marcosp7635.github.io/plots/Long_Lived_Isomers.html}{plot} that is also \href{https://mp7635plots.web.app/Long_Lived_Isomers.html}{on firebase}\\
+\includegraphics[scale=.65]{Images/helpful_plot.PNG}\\
+Thus Hf-178, Ta-180, Ir-192, and Cd-113 seem especially promising.
+\section{December}
+\subsubsection{12/5/2022}
+Since neutrons have a measurable magnetic dipole moment, could a fast beam of neutrons have their kinetic energy directly converted into electricity? This seems possible through Faraday's law of induction. Since 
+\begin{equation}\label{eqn:intFaradayLaw}
+\begin{split}
+\oint_{\partial\Sigma} E \cdot dl = -\frac{d}{dt}\iint_{\Sigma} B \cdot dS
+\end{split}
+\end{equation}
+What is the magnetic flux as a function of the neutron flux? What is the magnetic field from a neutron? I need to make sure to account for relativistic effects. 
 
 
 \end{document}
