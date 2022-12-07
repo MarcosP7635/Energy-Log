@@ -373,7 +373,33 @@ Since neutrons have a measurable magnetic dipole moment, could a fast beam of ne
 \oint_{\partial\Sigma} E \cdot dl = -\frac{d}{dt}\iint_{\Sigma} B \cdot dS
 \end{split}
 \end{equation}
-What is the magnetic flux as a function of the neutron flux? What is the magnetic field from a neutron? I need to make sure to account for relativistic effects. 
+What is the magnetic flux as a function of the neutron flux? What is the magnetic field from a neutron? I need to make sure to account for relativistic effects. Consider an individual neutron at rest. We have 
+\begin{equation}\label{eqn:dipoleB}
+\begin{split}
+B(r) = \frac{\mu_0}{4\pi}\frac{(3m\cdot\hat{r})\hat{r}-m}{r^3}\\
+\text{where $\hat{m}=\hat{r}$ the above line simplifies to} \quad\quad B(r) = \frac{\mu_0}{4\pi}\frac{2m}{r^3}
+\end{split}
+\end{equation}
+where $m$ is the magnetic moment of the neutron, the magnetic field is being measured at a distance $r$ from the neutron, and $\mu_0$ is the vacuum permeability. Since the magnetic moment of the neutron is on the order of $10^{-26}$ J/Tesla, $\mu_0$ is on the order of $10^{-6}$ N/A$^2$, and $4\pi\approx10$ we have 
+\begin{equation}
+    B\approx r^{-3}\times10^{-33}
+\end{equation}
+where $r$ is in meters and $B$ is in Teslas. 
+\subsubsection{12/6/2022}
+Attempting to use GEANT4 on colab and locally installing with wsl. \\
+These have been really helpful so far
+\begin{lstlisting}[breaklines]
+https://www.youtube.com/watch?v=3huHctBp0GE
+
+http://physino.xyz/gears/INSTALL/#install-pre-compiled-geant4-in-windows
+
+https://geant4-userdoc.web.cern.ch/UsersGuides/InstallationGuide/html/postinstall.html#datasets
+\end{lstlisting}
+\subsubsection{12/7/2022}
+Made these interactive maps of research reactors
+\href{https://marcosp7635.github.io/plots/reactor_map.html}{github pages version}
+\href{https://mp7635plots.web.app/reactor_map.html}{firebase version}
+Note that of course the locations are only approximations to show where their host city is on the map. 
 
 
 \end{document}
