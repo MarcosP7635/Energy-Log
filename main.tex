@@ -408,6 +408,25 @@ Back to the neutron accelerator, the real $pan \ dulce$ of this operation.
 I forgot that I have a library of empirical data in the subdirectory named exfortables. I will check to see if I have robust Julia code to read the data from it already. \\
 solar deuterium neutron source:
 Focus sunlight onto beryllium shell of frozen deuterium. The beryllium shell is surrounded by a very thick spherical shell of the neutron target (Hf-178? deuterium? U-238?) which then stores the energy.
+\subsubsection{12/26/2022}
+General plan for using neutrons for energy efficient nuclear reactions. Since current methods for slowing down neutrons are low throughput, energy production would be needed to offset this process. Thus, using a uranium-powered fission reaction or deuterium (and tritium?) powered fusion reaction to produce both energy and neutrons seems ideal. To slow down high temperature (velocity) neutrons, methods have been developed to study ultracold neutrons by Professor Brad Fillipone and collaborators. I hypothesize that such methods are capable of trapping neutrons into a circular path that can enable a high throughput and incredibly energy efficient nuclear reactions. To see why, consider a formulation for the probability of the occurrence of a given nuclear reaction for an incident neutron
+\begin{equation}\label{eqn:RxnProb}
+\mathlarger{\text{Probability} = \frac{\sigma\sb{R}}{\sigma\sb{T}}\left(1-e^\mathlarger{\frac{-\sigma\sb{T} \rho x N\sb{A}}{M}}\right)}
+\end{equation}
+where $\sigma\sb{R}$ is the reaction cross section and $\sigma\sb{T}$ is the total cross section between the target and the incident neutron, and both either have units of barns or m$^{-2}$; $\rho$ is the mass density of the target in kg/m$^3$; $x$ is the path length in m of the neutron through the target; and $M$ is the molar mass of the target in kg/mol; and $N_A$ is Avogadro's constant. One can see that in the limit where 
+\begin{equation}\label{eqn:Xlim}
+\mathlarger{
+x\gg \frac{\sigma\sb{T} \rho N\sb{A}}{M}
+}
+\end{equation}
+which is possible for an incident neutron that makes many trips through the target material as part of a circular neutron accelerator. The result (Equation \ref{eqn:Xlim}) implies that the probability reduces to 
+\begin{equation}\label{eqn:Plim}
+\mathlarger{
+    \text{Probability} = \frac{\sigma\sb{R}}{\sigma\sb{T}}
+}
+\end{equation}
+which would be a revolutionarily efficient nuclear reaction, one that can store great amounts of energy into a small amount of mass, on the order of $10^{6}$ times that of lithium ion batteries using existing radioisotope thermal generators.  
+
 
 
 
