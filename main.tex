@@ -437,9 +437,58 @@ How energy efficient would it be to use a proton accelerator to excite Hf-178? W
 \subsubsection{1/13/2023}
 Using a proton as a projectile to excite Hf-178 nuclei, in order to trap protons in circular orbit with radius $r$ and kinetic energies on the order of 1 MeV, the circular particle accelerator would need to have an electric field on the order of $r$ MV where $r$ is in meters. For safety reasons, what kind of shielding would be necessary and how well contained would the electric field be? What is the cheapest to mass produce the necessary hardware? Is it sustainable and ethical?
 \subsubsection{1/22/2023}
-For an order of magnitude understanding, how much power would be consumed by a loop of copper wire generating a magnetic field to trap neutrons in a circular path with radius 0.1m? \\
-
+For an order of magnitude understanding, how much power would be consumed by a loop of copper wire generating a magnetic field to trap neutrons in a circular path with radius 0.1m? From the Biot-Savart law we have
+\begin{equation}
+\begin{split}
+R = \frac{\rho L}{A}\\
+P = I^2R\\
+L = 2\pi r\\
+B = \mu\sb0I\frac{1}{4\pi r}\\
+\end{split}
+\end{equation}
+where $R$ is the resistance of the wire, $P$ is the power consumed, $\rho$ is the resistivity of the wire material, $L$ is the length of the wire, $r$ is the radius of the circle that the wire circums, and $A$ is the cross sectional area of the wire. By substitution, Equation \ref{eqn:dipoleB}, and solving for $P$ we have \href{https://colab.research.google.com/drive/1OYR0E28cEHTEWVsHOJu20cLt0IZk8A5O?usp=sharing}{https://colab.research.google.com/drive/1OYR0E28cEHTEWVsHOJu20cLt0IZk8A5O?usp=sharing}
+\begin{equation}
+  P = \frac{8 \pi m^{2} \rho}{A r^{3}} 
+\end{equation}
+where $m$ is the magnetic dipole moment of the neutron. 
 Can we use on-chip step up voltage devices to generate MV electric fields? Can these be used to build particle accelerators for mass production? 
+\section{May 2023}
+\subsubsection{5/23/2023}
+Planning to make a start-up and reach out to labs after final exams in mid-June during SURF. Including notes from this  \href{https://www.youtube.com/watch?v=r-98YRAF1dY&list=PLxpB5Hi17Tp2cAs_OoRZSHqohHJhy9AWo&index=1}{very introductory lecture playlist from Harvard Innovation Labs for startups:}
+\\
+
+allow companies and organizations to pay in royalties or pre-paid jobs for high performance teams\\
+
+like the how the water fountains measure the water bottles saved the battery should have a tally of kWh (and Joules and Btu) saved\\
+
+need to find key customers. City-wide power grids for energy storage and back up supplies for hospital
+
+first city-wide power grids. that is slow, so while permitting is happening we should focus on hospitals
+
+also solar farms!
+
+works really really well with solar companies and vehicles
+Number 1 priority? which is fast and shows that it works well! probably hospitals, especially in places like puerto rico that struggle with power and solar farms
+
+talk to the solar people about how important storage is
+
+reach out to the user!!!!
+
+remember, the end of knowledge is not the end of answers, but the end of questions
+what are we doing?
+talking to legal people and business people, then aquire necessary funding (grants, loans, vc, other investors)
+You replied to yourself
+places that need storage without having access to inclines or lakes
+so like the midwest?
+you have to be a high priority purchase for the customer, and the only way to know is to ask them
+ask them what their number 1 priority is
+what would installing this look like? how much would it cost? how long would it take? how would installation inconvenience the existing infrastructure (e.g. something critical like a hospital)?
+ask them why wouldn't they buy this product?
+let the hospital pay by taking a cut of their profit, and give this profit to the patients
+it has to be worth any risk
+you need order of magnitude improvement over a crucial problem, which it seems like we have
+
+
 
 
 \end{document}
