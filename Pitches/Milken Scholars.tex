@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = U.S.]{csquotes}
+\MakeOuterQuote{"}
+\titleformat{\subsubsection}
+  {\color{gray}\normalfont\normalsize\selectfont}{\color{gray}\thesubsubsection}{1em}{}
+\usepackage[hidelinks]{hyperref}
+\usepackage{comment}
+\setstretch{.75}
+\usepackage[style=chem-acs,sorting=none]{biblatex}
+\usepackage{titlesec}
+\addbibresource{References.bib}
+\geometry{
+ a4paper,
+ total={6.5in,0in},
+ left= 15mm,
+ top= 15mm,
+ bottom=15mm,
+ right = 15mm
+ }
+\begin{document}
+\begin{center}
+   \larger{\textbf{Mars-Tested Energy Storage (MTES): Safely Storing Energy With Nuclear Reactions} }\\
+   Marcos Perez
+\end{center}
+\begin{comment}
+    What do I want them to walk away with? \\
+    Nuclear reactions 
+\end{comment}
+\textbf{Brief Overview}\par
+
+\textbf{Motivation}\par
+Air pollution alone kills over 7 million people every year globally \cite{mannucci_novel_2019, noauthor_compendium_nodate, nansai_consumption_2021}. 
+In order to reduce this death toll and combat climate change, it is imperative to improve energy storage technology to make solar and wind power more robust to the recent frequent extreme changes in weather.
+\\ \\ \textbf{Advantages Over Current Technology and Feasibility}\par
+The batteries described below would have a specific energy 10$^{11}$ J/kg vs. the 10$^6$ J/kg of lithium-ion batteries. This 100-thousand-fold advantage is closer to a hundred-fold advantage when taking into account necessary shielding and the energy efficiency of current radioisotope thermal generators (RTGs). However, charging such a battery would be very expensive using current methodology. However, I think that the sheer specific energy (J/kg) of such a technology warrants investigation into more energy efficient methods of energy storage with nuclear reactions. It is currently a small field in the preliminary stages of research, but in the long term it may hold great promise.
+\\ \\ \textbf{Applications and Potential Market Share}\par 
+Potential applications include emergency power supplies for hospitals and vehicles, any current application for lithium-ion batteries, and electric aircraft and spacecraft. This technology could have an impact comparable to the miniaturization of computing: replacing what came before and becoming ubiquitous across every industry. First, fees for consulting and hiring legal and business staff for patent information would be necessary before naming prices for angel investors and equity. 
+\\ \\ \textbf{Battery Technology}\par
+I seek to utilize recently discovered nuclear reactions in a safe and accessible manner to store energy that would be converted to electricity using the same technology that has operated continuously without fail for the past 12 years on the Mars rovers. Such a battery would operate using nuclear excitation: which involves irradiating nuclei in order to raise them to
+a stable excited energy level. By exciting these nuclei, they have essentially stored energy.
+By irradiating them a second time such that they are left in a higher yet much less stable
+energy level, they will drop to their ground state and release their stored energy. 
+
+By irradiating nuclei, it is possible to raise them to a stable excited energy level. By exciting these nuclei, they have essential stored energy. By irradiating them a second time such that they are left in a higher yet much less stable energy level, they will drop to their ground state and release their stored energy. For nuclei that have potential for such an application, see the comprehensive interactive plot I also made while on leave: \href{https://marcosp7635.github.io/plots/Long_Lived_Isomers.html}{plots}. \\
+A radiothermal generator (RTG) uses the radiation to heat up a thermoelectric device, which has successfully worked on the Mars Curiosity Rover since 2011 as well as the more recent Mars Perseverance Rover.
+
+
+\begin{comment}
+ Originality, Innovativeness, Thoughtfulness
+check
+ Operational Feasibility and Sustainability
+not feasible, incredibly sustainable
+ Risk / Reward Advantage
+high risk, the highest reward
+ Positive Social / Market relevance and influence potential
+wtf does this even mean
+ Clarity and Organization
+let's hope
+\end{comment}
+        Betavoltaic batteries have the potential to run continuously for over a hundred years if based around isotopes with long half-lives such as Ni-63, but currently producing these isotopes is quite expensive. This was recently demonstrated by a research group in Russia.
+
+        I think the most realistic way of producing such radioisotopes would be to utilize specifically designed nuclear fission reactors to produce the needed radioisotopes: Pu-239 in the case of the Mars Rover that takes considerable shielding, or Ni-63 which is safe to handle using only around an inch of acrylic. The power produced by an ideal battery as a function of time can be seen in the publicly available webapp I developed while on leave from Caltech: \href{https://marcosp7635-plot-power.streamlit.app/}{https://marcosp7635-plot-power.streamlit.app}
+I have a large library on Zotero of relevant papers, and I am not yet associated with a lab, but I am in the process of contacting nuclear reactor laboratories and particle accelerator groups to work on this technology. 
+\begingroup
+\titleformat*{\section}{\fontsize{12pt}{14pt}\bfseries\selectfont}
+\printbibliography
+\endgroup
+
+
+\end{document}
