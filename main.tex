@@ -503,7 +503,20 @@ file, the tritium production from low energy neutrons impacting Li-6 is surprisi
 \section{December 2023}
 \subsubsection{Christmas Day}
 \includegraphics[scale=.7]{Images/excitation_mt_codes_endf_data_explorer.png}\\
-What are the criteria for a working energy storage system? What would rigoriously disqualify one? The ratio of the reaction cross section to the total cross section is the upperbound on the efficiency for a given projectile, assuming the reaction cross section accounts for all of the possible pathways for energy to be stored.  
+What are the criteria for a working energy storage system? What would rigoriously disqualify one? The ratio of the reaction cross section to the total cross section is the upperbound on the efficiency for a given projectile and target, assuming the reaction cross section accounts for all of the possible pathways for energy to be stored.  \\
+There is some minimum efficiency that is required for a given isotope's metastable excited states. For energy $E_\text{charged}$ where the isotope is excited from some naturally occurring (ground) state and a higher excited state with energy $E_\text{discharge}$ of the same isotope that has some short half-life, the minimum efficiency, $\mu$ required to merely function as a battery is governed by
+\begin{align}
+& \mu E_\text{discharge}\ge E_\text{discharge}-E_\text{charged}
+\quad\therefore\quad \mu\ge1-\frac{E_\text{charged}}{E_\text{discharge}} 
+\end{align}
+Thus it is necessary but not sufficient for the reaction and total cross sections $\sigma_\text{reaction}$ and $\sigma_\text{total}$
+\begin{align}
+\frac{\sigma_\text{reaction}}{\sigma_\text{total}}\ge1-\frac{E_\text{charged}}{E_\text{discharge}} 
+\end{align}
+
+
+
+
 
 
 
