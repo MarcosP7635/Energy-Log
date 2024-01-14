@@ -50,12 +50,21 @@
 &\text{Recall the Schrodinger Equation (SE)}\quad i\hbar\partial_t\Psi=H\Psi\\
 &\text{Consider solutions of the form}\quad \Psi(x,t)=\psi(x)\phi(t)\ \therefore\ \partial_t\Psi=\psi(x)\partial_t\phi(t)\ ,\ 
 \partial^2_x\Psi=\phi(t)\frac{d^2\psi(x)}{dx^2}\\
+\label{eqn:time_dep_factor}
 &\text{With constant energy E}\quad \frac{E}{i\hbar}=\partial_t\Psi=\psi(x)\partial_t\phi(t)\quad\therefore\quad \phi(t)=e^{-i Et/\hbar}\\
+\label{eqn:time_ind_SE}
 &\text{With the momentum and position operators we also have}\quad -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E\psi(x) \\
 &\text{And the general solution is of the form}\quad \Psi(x)=\sum_n\left[c_n\psi_n(x)e^{-itE_n/\hbar}\right]
 \end{align}
-
-
+\subsubsection{Free Particle}
+\begin{align}
+ &\text{Time-independent SE (Eq \ref{eqn:time_ind_SE}) and }V=0\quad -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}=E\psi(x)\\
+ &\text{Define }k\equiv\pm\sqrt{\frac{2mE}{\hbar}}\quad\therefore\quad \frac{d^2\psi}{dx^2}=-k^2\psi(x)\quad\text{Using Eq \ref{eqn:time_dep_factor}}\quad \mathlarger{\psi_k(x)=Ae^{ik\left(x-t\frac{k\hbar}{2m}\right)}}\\
+ &\text{Notice that for discrete }k\quad \int_{-\infty}^\infty \Psi_k^*\Psi_kdx>c\ \forall\ c\in\mathbb{R}\\
+&\text{Thus to be normalizable }k \text{ is continuous}\therefore\quad \Psi(x,t)=\left(2\pi\right)^{-1/2}\int_{-\infty}^\infty\phi(k)e^{ik\left(x-t\frac{k\hbar}{2m}\right)} dk
+\\
+&\text{Where by orthogonality}\quad \phi(k)=\left(2\pi\right)^{-1/2}\int_{-\infty}^\infty\psi(x,0)e^{ik\left(x-t\frac{k\hbar}{2m}\right)} dk
+\end{align}
 
 \section{5/31/22}
 
