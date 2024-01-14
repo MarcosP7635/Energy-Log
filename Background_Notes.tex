@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{mathabx}
+\usepackage{relsize}
+\usepackage{graphics}
+\usepackage{outlines}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+%\usepackage{indentfirst}
+\usepackage{tikz}
+\usepackage{listings}
+\lstset{columns=fullflexible}
+\usepackage{sidecap}
+\usepackage{comment}
+\geometry{
+ a4paper,
+ total={6.5in,0in},
+ left= 15mm,
+ top= 15mm,
+ bottom=15mm,
+ right = 15mm
+ }
+\title{Background Notes}
+\author{Marcos Perez}
+\date{June 2022 - }
+
+\begin{document}
+
+\maketitle
+
+\section{Texts}
+\begin{itemize}
+    \item Direct Nuclear Reaction Theories by Norman Austern
+    \item Griffith's Introduction to Quantum Mechanics 3rd Edition
+\end{itemize}
+
+\section{Wave Packets and Scattering}
+\subsection{Warmup}
+\subsubsection{Seperable Solutions to Time-Independent Schrodinger Equation}
+\begin{align}
+&\text{Recall the Schrodinger Equation (SE)}\quad i\hbar\partial_t\Psi=H\Psi\\
+&\text{Consider solutions of the form}\quad \Psi(x,t)=\psi(x)\phi(t)\ \therefore\ \partial_t\Psi=\psi(x)\partial_t\phi(t)\ ,\ 
+\partial^2_x\Psi=\phi(t)\frac{d^2\psi(x)}{dx^2}\\
+&\text{With constant energy E}\quad \frac{E}{i\hbar}=\partial_t\Psi=\psi(x)\partial_t\phi(t)\quad\therefore\quad \phi(t)=e^{-i Et/\hbar}\\
+&\text{With the momentum and position operators we also have}\quad -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E\psi(x) \\
+&\text{And the general solution is of the form}\quad \Psi(x)=\sum_n\left[c_n\psi_n(x)e^{-itE_n/\hbar}\right]
+\end{align}
+
+
+
+\section{5/31/22}
+
+\end{document}
