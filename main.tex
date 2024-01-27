@@ -529,6 +529,20 @@ Email adderss: kirisch@mpca.kiev.ua
 Mailing Address: Institute for Nuclear Research, Nauky Av. 47, Kyiv 03680, Ukraine
 https://doi.org/10.1016/j.physletb.2023.138401
 \end{lstlisting}
+\subsection{1/22/24}
+\subsubsection{More Comprehensive Description of Efficiency}
+Stopping power of the projectile is the other fundamental limit on the energy efficiency I have not considered. Of course this will depend on both the velocity of the projectile, what the projectile is, and the composition of the target. For electrons and protons, energy will be lost in the form of brehmsstrahlung radiation. For neutrons, the stopping power is negligible (outside of astronomically large magnetic field gradients). 
+\subsection{1/27/24}
+Now let's consider the effect of stopping power on the probability of a direct nuclear reaction. I'll think of this in discrete time steps. In the previous time step, the projectile moved with velocity $\dot{x}_\text{before}$ relative to the medium. The current time step is $\Delta t$ seconds long. The stopping power $s$ is the projectile energy dependent change in projectile energy per traversed distance. Thus the velocity in the current time step is $\dot{x}_\text{now} = \sqrt{2\dot{x}_\text{before}^2m_\text{projectile}+s\dot{x}_\text{before}\Delta t}/(2m_\text{projectile})$ for nonrelativistic projectiles. 
+The probability of a specific direct nuclear reaction occurring in this time step is $\rho_A\sigma_\text{reaction}/A_\text{target}$ where $A_\text{target}$ is just the total cross sectional area of the target in the direction of $\dot{x}_\text{now}$, $\rho_A$ is the number of target nuclei per area, and $\sigma_\text{reaction}$ is the $\dot{x}_\text{now}$ dependent cross section.    
+
+
+
+
+
+
+
+
 
 
 
