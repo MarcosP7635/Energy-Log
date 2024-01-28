@@ -533,7 +533,15 @@ https://doi.org/10.1016/j.physletb.2023.138401
 \subsubsection{More Comprehensive Description of Efficiency}
 Stopping power of the projectile is the other fundamental limit on the energy efficiency I have not considered. Of course this will depend on both the velocity of the projectile, what the projectile is, and the composition of the target. For electrons and protons, energy will be lost in the form of brehmsstrahlung radiation. For neutrons, the stopping power is negligible (outside of astronomically large magnetic field gradients). 
 \subsection{1/27/24}
-Now let's consider the effect of stopping power on the probability of a direct nuclear reaction. I'll think of this in discrete time steps. In the previous time step, the projectile moved with velocity $\dot{x}_\text{before}$ relative to the medium. The current time step is $\Delta t$ seconds long. The stopping power $s$ is the projectile energy dependent change in projectile energy per traversed distance. Thus the velocity in the current time step is $\dot{x}_\text{now} = \sqrt{2\dot{x}_\text{before}^2m_\text{projectile}+s\dot{x}_\text{before}\Delta t}/(2m_\text{projectile})$ for nonrelativistic projectiles. 
+Now let's consider the effect of stopping power on the probability of a direct nuclear reaction. I'll think of this in discrete time steps. In the previous time step, the projectile moved with velocity $\dot{x}_\text{before}$ relative to the medium. The current time step is $\Delta t$ seconds long. The stopping power $s$ is the projectile energy dependent change in projectile energy per traversed distance. Thus the velocity in the current time step is $\dot{x}_\text{now} = \sqrt{2\dot{x}_\text{before}^2m_\text{projectile}+s\dot{x}_\text{before}\Delta t}/(2m_\text{projectile})$ for nonrelativistic projectiles.
+\begin{align}
+&\text{Recall that for a free relativistic particle the kinetic energy is}\quad T_\text{now}=m_0c^2(1-(1-\dot{x}_\text{now}^2/c^2)^{-1/2})\\
+&\text{Rearranging yields}\quad \dot{x}_\text{now}=c\sqrt{1-m_0^2c^4/T_\text{now}^2}\\
+&\text{Since}\quad T_\text{now}=T_\text{before}+s\dot{x}_\text{before}\Delta t\\
+&\text{By substitution}\quad \dot{x}_\text{now}=c\sqrt{1-m_0^2c^4/(T_\text{before}+s\dot{x}_\text{before}\Delta t)^2}\\
+&\text{Substituting to be in terms of }\dot{x}_\text{before} \text{ we have from the relativistic kinetic energy in the previous time step}\nonumber\\ 
+&\dot{x}_\text{now}=c\sqrt{1-m_0^2c^4/(m_0c^2((1-\dot{x}_\text{before}^2/c^2)^{-1/2}-1)+s\dot{x}_\text{before}\Delta t)^2}
+\end{align}
 The probability of a specific direct nuclear reaction occurring in this time step is $\rho_A\sigma_\text{reaction}/A_\text{target}$ where $A_\text{target}$ is just the total cross sectional area of the target in the direction of $\dot{x}_\text{now}$, $\rho_A$ is the number of target nuclei per area, and $\sigma_\text{reaction}$ is the $\dot{x}_\text{now}$ dependent cross section.    
 
 
